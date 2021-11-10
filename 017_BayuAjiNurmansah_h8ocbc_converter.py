@@ -3,7 +3,7 @@ Name : Bayu Aji Nurmansah
 Code : FSDO001ONL017
 Assignment 2 python
 '''
-
+import msvcrt as m
 from temperature_converter import conv_to_celsius_or_kelvin, conv_to_fahrenheit, conv_from_fahrenheit
 
 
@@ -36,6 +36,8 @@ def assignment_2():  # membuat fungsi yang akan terus di panggil ketika program 
             result = conv_to_celsius_or_kelvin(
                 val_temperature, val_temperature_unit)
             print(result, '\n')
+            print("Press any key to continue...")
+            m.getch()
 
         if inp.lower() == 'b':  # jika user melakukan input B/b maka menu ini akan dipilih
             print("\n Konversi suhu dari/ke celsius/fahrenheit , kelvin/fahrenheit")
@@ -46,6 +48,8 @@ def assignment_2():  # membuat fungsi yang akan terus di panggil ketika program 
             # memanggil fungsi conv_to_fahrenheit kedalam variable result
             result = conv_to_fahrenheit(val_temperature, val_temperature_unit)
             print(result, '\n')
+            print("Press any key to continue...")
+            m.getch()
 
         if inp.lower() == 'c':  # jika user melakukan input C/c maka menu ini akan dipilih
             print("\n Konversi suhu dari/ke fahrenheit/celsius , fahrenheit/kelvin")
@@ -57,6 +61,8 @@ def assignment_2():  # membuat fungsi yang akan terus di panggil ketika program 
             result = conv_from_fahrenheit(
                 val_temperature, val_temperature_unit)
             print(result, '\n')
+            print("Press any key to continue...")
+            m.getch()
 
 
 assignment_2()
